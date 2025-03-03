@@ -18,7 +18,7 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
 
 # Configurable Rate Limiting (Default: 10 requests per minute)
-RATE_LIMIT = os.getenv("RATE_LIMIT")
+RATE_LIMIT = os.getenv("RATE_LIMIT", "10 per minute")
 
 # Initialize Limiter
 limiter = Limiter(
