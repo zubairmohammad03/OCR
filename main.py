@@ -54,11 +54,18 @@ def generate_caption(image_data, prompt):
 @app.route('/generate_caption', methods=['POST'])
 def generate_captions():
     """API endpoint to generate captions for two uploaded images."""
+    
+    # Print received files for debugging
+    print("Received files:", request.files)
+
     if 'image1' not in request.files or 'image2' not in request.files:
         return jsonify({"error": "Both images are required"}), 400
 
     image1 = request.files['image1']
     image2 = request.files['image2']
+
+    if image1.filename == "" or image2.filename == "":
+        return jsonify({"error": "Both images must be selected"}), 400
 
     try:
         # Encode images
