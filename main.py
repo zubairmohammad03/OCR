@@ -88,7 +88,9 @@ def generate_captions():
         caption2 = generate_caption(image_data2, prompt2)
 
         return jsonify({"caption1": caption1, "caption2": caption2})
-
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "Welcome to Passport OCR API"})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
