@@ -12,7 +12,7 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the correct port
-EXPOSE 8080  # Changed from 5000 to 8080
+EXPOSE 8080
 
 # Set the entry point to run the app
 CMD ["python", "main.py"]
