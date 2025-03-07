@@ -3,15 +3,12 @@ import requests
 import json
 import base64
 import os
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
 
 app = Flask(__name__)
 
 # Get API key from .env file
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = "AIzaSyAIASQ9IVxHqwRTXcttaLSCNqGb2PVE_8k"
+RATE_LIMITER = "50 per minute"
 
 # Google Gemini API URL
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
