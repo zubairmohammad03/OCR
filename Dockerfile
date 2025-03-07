@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080  # Changed from 5000 to 8080
 
 # Set the entry point to run the app
-CMD ["python", "flask_api.py"]
+CMD ["python", "main.py"]
