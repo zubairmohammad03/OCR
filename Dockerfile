@@ -6,7 +6,6 @@ WORKDIR /app
 
 # Copy the application files
 COPY flask_api.py /app/
-COPY .env /app/   # Copy .env file
 COPY requirements.txt /app/
 
 # Install required dependencies
