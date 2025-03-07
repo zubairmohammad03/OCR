@@ -5,7 +5,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy the application files
-COPY flask_api.py /app/
+COPY main.py /app/
 COPY requirements.txt /app/
 
 # Install required dependencies
