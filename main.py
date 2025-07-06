@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Get API key from .env file
-GEMINI_API_KEY = "AIzaSyAIASQ9IVxHqwRTXcttaLSCNqGb2PVE_8k"
+GEMINI_API_KEY = "AIzaSyAP2dgDt0hCA1lGAA8otE-GlVGYYdbZm1Q"
 RATE_LIMIT = "50 per minute"
 
 # Google Gemini API URL
