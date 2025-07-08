@@ -8,7 +8,7 @@ import time
 app = Flask(__name__)
 
 # Use secure environment variable for API key
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("AIzaSyAP2dgDt0hCA1lGAA8otE-GlVGYYdbZm1Q")
 if not GEMINI_API_KEY:
     raise EnvironmentError("Missing GEMINI_API_KEY in environment variables")
 
