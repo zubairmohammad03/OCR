@@ -1,12 +1,18 @@
+# Use an official Python runtime as a base image
 FROM python:3.10-slim
 
+# Set the working directory in the container
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+# Copy the application files
+COPY main.py /app/
+COPY requirements.txt /app/
+
+# Install required dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
-
+# Expose the correct port
 EXPOSE 8080
 
-CMD ["gunicorn", "-b", ":8080", "main:app", "--workers=2", "--threads=4"]
+# Set the entry point to run the app
+CMD ["python", "main.py"]
